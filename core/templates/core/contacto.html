@@ -1,0 +1,184 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<main class="contenedormain">
+    <div>
+        <img class="imagenmujercontacto" src="{% static 'core/img/imagenContacto.png' %}" alt="imagenMujerAtendiendoLlamada">
+    </div>
+    <br><br>
+    <section class="tituloForm">
+        <h1>Para realizar tu consulta o solicitud de presupuesto, contactanos:</h1>
+        <br>
+        <form id="formulario" class="formulario" action="" method="post">
+            <div class="formulario__grupo" id="grupo__nombre">
+                <label for="nombre" class="formulario__label"> Nombre</label>
+                <div class="formulario__grupo-input">
+                    <input class="formulario__input" type="text" id="nombre" name="nombre"
+                        placeholder="Juana Pérez">
+                    <i class="formulario__validacion-estado fa-regular fa-circle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">El campo nombre no puede tener menos de 4 letras.</p>
+            </div>
+
+
+            <div class="formulario__grupo" id="grupo__correo">
+                <label for="correo" class="formulario__label"> E-mail</label>
+                <div class="formulario__grupo-input">
+                    <input class="formulario__input" type="email" id="correo" name="correo"
+                        placeholder="correo@correo.com">
+                    <i class="formulario__validacion-estado fa-regular fa-circle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">El correo sólo puede contener letras, números, puntos, guiones y
+                    guión bajo.</p>
+            </div>
+
+
+            <div class="formulario__grupo" id="grupo__asesoria">
+                <label for="asesoria" class="formulario__label"> ¿Querés que te brindemos asesoría
+                    telefónica?</label>
+                <div class="formulario__grupo-input">
+                    <select class="formulario__input" name="asesoria" id="asesoria">
+                        <option value="Si"> Si</option>
+                        <option value="No"> No</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="formulario__grupo" id="grupo__telefono">
+                <label for="telefono" class="formulario__label"> Teléfono</label>
+                <div class="formulario__grupo-input">
+                    <input class="formulario__input" type="tel" id="telefono" name="telefono" size="22"
+                        placeholder="Cód. de área + tel. sin el 15">
+                    <i class="formulario__validacion-estado fa-regular fa-circle-xmark"></i>
+                </div>
+                <p class="formulario__input-error">El teléfono solo puede contener numeros y el máximo son 11
+                    dígitos.</p>
+            </div>
+
+
+            <div class="formulario__grupo" id="grupo__llamada">
+                <label for="llamada" class="formulario__label"> ¿En qué horario te podemos contactar?</label>
+                <div class="formulario__grupo-input">
+                    <select class="formulario__input" name="llamada" id="llamada">
+                        <option value="manana"> Mañana</option>
+                        <option value="tarde"> Tarde</option>
+                        <option value="ningunHorario"> Ningún horario</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="formulario__grupo">
+                <label for="adjunto" class="formulario__label"> Ubicación en google maps del domicilio
+                    <input class="fancy-file" type="file" name="adjunto" id="adjunto">
+                </label>
+                <label for="adjunto">
+                    <span class="fancy-file_fancy-file-name">
+                        <span>Ningún archivo seleccionado</span>
+                    </span>
+                    <span class="fancy-file_fancy-file-button">Adjuntar archivo
+                    </span>
+
+
+                    <small>(Los formatos permitidos son: jpg y png.)</small>
+                </label>
+            </div>
+
+
+            <div class="formulario__grupo">
+                <div class="formulario__grupo" id="grupo__mensaje">
+                    <label for="mensaje" class="formulario__label"> Dejanos tu mensaje</label>
+                    <textarea class="formulario__msj" name="mensaje" id="mensaje" cols="45" rows="8"
+                        placeholder="Dejanos tu mensaje y te responderemos a la brevedad...">
+                </textarea>
+                </div>
+            </div>
+
+
+            <div>
+                <div class="formulario__mensaje" id="formulario__mensaje">
+                    <p><i class="fa-solid fa-triangle-exclamation"></i><b>Error:</b> Por favor, vuelve a rellenar el
+                        formulario correctamente.</p>
+                </div>
+                <div class="formulario__grupo formulario__grupo-btn-enviar">
+                    <button class="formulario__btn" id="boton" type="submit"> Enviar
+                        mensaje</button>
+                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">¡Formulario enviado
+                        exitosamente!</p>
+                </div>
+
+
+            </div>
+        </form>
+        <br><br>
+    </section>
+    <section class="tituloExperiencia">
+        <h1>Experiencias de nuestros clientes</h1>
+        <div class="slideText">
+            <div class="listaExperiencias">
+                <div class="contenedorExperiencia">
+                    <div class="experiencia">
+                        <p class="espesorLetra">Romina Label dijo...</p>
+                        <p>Muy conformes. El servicio es buenísimo. La atención excelente.
+                            El servicio post venta un lujo.
+                            Siempre bien dispuestos y atentos a cualquier duda que pueda surgir.
+                            Altamente recomendable!!</p>
+                    </div>
+                    <div class="experiencia">
+                        <p class="espesorLetra">Gala Vallejos dijo...</p>
+                        <p>Excelente atención y respuesta! Instalé un termotanque (que calienta un montón y no se
+                            termina nunca el agua) y algunos paneles, a los meses me surgió un problema, y la
+                            postventa es
+                            espectacular.</p>
+                    </div>
+                    <div class="experiencia">
+                        <p class="espesorLetra">Victoria Lambertucchi dijo...</p>
+                        <p>Unos genios! Instalé paneles en casa hace 6 meses, fueron súper prolijos y excelentes en
+                            el trato. Hoy, viendo el ahorro en la factura de luz, puedo decir que es la mejor
+                            decisión que pude
+                            haber tomando!</p>
+                    </div>
+                    <div class="experiencia">
+                        <p class="espesorLetra">Maximiliano Aras dijo...</p>
+                        <p>Impecable el asesoramiento de todos los chicos. El equipo funciona espectacular, hasta
+                            ahora ni un
+                            problema y desde ya el agradecimiento a la gente de Frecuencia Solar. Son muy
+                            recomendables. Un
+                            abrazo</p>
+                    </div>
+                    <div class="experiencia">
+                        <p class="espesorLetra">Leticia Montero dijo...</p>
+                        <p>Excelente resultado, con profesionalidad, responsabilidad y óptima comunicación, esta
+                            empresa logró con creces concretar nuestro proyecto. Hace tiempo que estabamos
+                            averiguando. Super recomendable!</p>
+                    </div>
+                    <div class="experiencia">
+                        <p class="espesorLetra">Rodrigo Toro dijo...</p>
+                        <p>Me parecieron muy profesionales, con los tiempos, la instalacion, todo... super
+                            recomendables! El mejor precio que encontré en el mercado, muy buen servicio y atención.
+                        </p>
+                    </div>
+                    <div class="experiencia">
+                        <p class="espesorLetra">Carla Salazar dijo...</p>
+                        <p>Mi experiencia fue excelente! Los recomiendo totalmente. Siempre muy atentos y cordiales,
+                            resolvieron
+                            todas mis consultas y e servicio pos venta impecable. Muy complacida. Gracias!</p>
+                    </div>
+                    <div class="experiencia">
+                        <p class="espesorLetra">Gerónimo Sosa dijo...</p>
+                        <p>El servicio es buenísimo. Se comportaron muy atentos a cualquier duda que pueda surgir.
+                            Los recomiendo gratamente. Ahora a disfrutar de los resultados. Estamos muy contentos."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" crossorigin="anonymous"></script>
+<script src="{% static 'core/js/scriptFormulario.js' %}"></script>
+{% endblock %}

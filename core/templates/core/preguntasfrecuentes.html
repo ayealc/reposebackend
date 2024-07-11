@@ -1,0 +1,105 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+
+{% block headers %}  
+<main class="main-pf">
+	<figure>
+		<img id="paneles-pf" src="{% static 'core/img/paneles-pf.png' %}" alt="Paneles">
+	</figure>
+    <h1 id="h-pf">Preguntas Frecuentes</h1>
+
+    <br><br>
+</main>
+{% endblock %}  
+
+{% block content %}
+<main class="main-pf">
+<div class="container">
+	<div class="pregunta">
+		<div class="pregunta_encabezado">
+			<h3>Que son las energias renovables</h3>
+		</div>
+		<div class="respuesta">
+			Las energías renovables son fuentes de energía que se regeneran naturalmente con el tiempo y no se agotan. Son la parte 
+			más importante de la transición hacia un sistema energético que abandone los combustibles fósiles, 
+			contrarrestando así el calentamiento global. Ademas de ser energías limpias que protegen la salud humana y el medioambiente.
+		</div>
+    </div>
+
+	<div class="pregunta">
+		<div class="pregunta_encabezado">
+			<h3>Cuales son las Fuentes de energia renovales</h3>
+		</div>
+		<div class="respuesta">
+			<ol>
+				<li>Energía solar</li>
+				<li>Energía eólica</li>
+				<li>Hidroeléctrica</li>
+				<li>Energía geotérmica</li>
+				<li>Energía de la biomasa</li>
+				<li>Energía marina</li>
+			</ol>
+		</div>
+	</div>
+
+	<div class="pregunta">
+		<div class="pregunta_encabezado">
+			<h3>Ventajas de la energia renovables</h3>
+		</div>
+		<div class="respuesta">
+			<ul>
+			<li>Son libres de contaminantes, pues no producen emisiones de dióxido de carbono u otros gases contaminantes a la atmósfera, por lo que 
+			se disminuye el efecto invernadero. Con un aire más limpio, tanto la población humana como el planeta Tierra, en general, ganarán en salud.</li>
+            <li>No generan residuos de difícil tratamiento, como en el caso de la energía nuclear.</li>
+            <li>Son inagotables, ya que provienen de fuentes como el Sol, el viento o las mareas; esto permite que se regeneren por
+			la inmensa cantidad de energía que contiene.</li>
+            <li>Mejora la economía del país, se consigue crear un mayor número de puestos de trabajo.</li>
+            <li>Las energías renovables no contaminan, son más respetuosas con el medio ambiente y representan la alternativa de energía más limpia hasta el momento.
+			Son seguras, y tampoco suponen un riesgo para la salud.</li>
+		    </ul>
+		</div>
+	</div>
+
+	<div class="pregunta">
+		<div class="pregunta_encabezado">
+			<h3>Usos mas frecuentes de las energias renovables</h3>
+		</div>
+		<div class="respuesta">
+			<ol>
+			<li><b><u>Energía solar en las fábricas de productos químicos:</u></b> las fábricas pueden producir si instalan paneles solares en su techo, 
+			que les permiten generar energía solar, eliminando la dependencia de la red eléctrica. Además, pueden instalar un sistema de almacenamiento 
+			de energía. Esta alternativa les permite utilizar la energía generada por el sistema fotovoltaico industrial también durante la noche,
+			cuando la demanda de energía en la planta de producción es alta.</li> 
+			<li><b><u>Energía eólica en la industria alimentaria:</u></b> las fábricas danesas ya están instalando turbinas eólicas en sus propiedades. 
+			<u>Por ejemplo</u>, una fábrica de alimentos de Dinamarca utiliza la energía generada por las turbinas eólicas, y el hidrógeno que generan los 
+			utilizan como combustible en sus camiones para realizar las entregas.</li>
+			<li><b><u>Energia hidráulica para la producción papelera:</u></b> las fábricas papeleras chilenas pueden emplear las corrientes de agua de los ríos 
+			que se ubican en sus proximidades para generar energia la cual sirve para alimentar las máquinas de la producción y garantizar el suministro eléctrico e
+			incluso vender los excedentes.</li>
+			<li><b><u>Fabricantes de muebles que emplean biomasa:</u></b>las fábricas suecas ya producen mobiliario usando residuos de madera y aserrín. 
+			Estos restos de basura generan energía a través de una caldera de biomasa.</li>
+			<li><b><u>Energia Geotermica:</u></b> En Islandia se usa para la fabricacion de vidrio, al ser un pais volcanico emplean el vapor
+			cuál sino en un país volcánico geotérmico para generar electricidad y calentar el agua y el aire en los procesos de producción de la compañía.</li>
+			</ol>
+		</div>
+	</div>
+
+	<div class="pregunta">
+		<div class="pregunta_encabezado">
+			<h3>Desventajas de la energia renovables</h3>
+		</div>
+		<div class="respuesta">
+			<p><ol type="A">
+			<li>El espacio, dependiendo de la fuente que se requiera, necesitan de espacios grandes para poder desarrollarse.</li>
+			<li>Ubicación, cada zona dispone de mejores recursos naturales de una fuente u otra para la obtención de energía.</li>
+			<li>El recurso económico, ya que supone un gran movimiento de dinero para la inversión inicial</li>
+		</ol>
+		</div>
+		</div>
+		<br><br>
+	</div>
+</div>
+</main>
+	<script src="{% static 'core/js/preguntasfrecuentes.js' %}"></script>
+{% endblock %}

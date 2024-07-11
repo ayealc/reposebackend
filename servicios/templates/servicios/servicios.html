@@ -1,0 +1,51 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+
+{% block headers %}  
+<div class="centrado">
+    <main class="cuerpo">
+        <figure>
+            <img id="paneles" src="{% static 'core/img/paneles.jpg' %}" alt="Paneles">
+        </figure>
+        <h1 id="titulo_principal">Nuestros Servicios</h1>
+
+        {% for project in projects %}
+        <nav class="menu_servicios">
+                <ul>
+                    <li><a href="#{{project.title}}">{{project.title}}</a></li>
+                </ul>
+        </nav>
+        {% endfor %}
+        <div class="objetivo">
+                <h3>Nuestro objetivo es brindarle a cada usuario la mejor solución energética para su domicilio o emprendimiento, desde el asesoramiento, la instalación y el mantenimiento de los sistemas fotovoltaicos. </h3>
+        </div>
+    </main>
+</div>
+{% endblock %}  
+
+{% block content %}
+
+{% for project in projects %}
+<div class="centrado">
+    <main class="cuerpo">
+        <div class="sistemas">
+            <article class="sistema">
+               <a id="{{project.title}}"></a>
+               <h3 class="titulo">{{project.title}}:</h3>
+               <figure class="imagen_sistemas">
+                  <img src="{{project.image.url}}" alt="">
+               </figure>
+             
+               <div class="contenido_sistemas">
+                   <p class="p_servicios">{{project.description}} </p>
+               </div>
+            </article>
+
+            
+        </div>
+    </main>
+</div>
+{% endfor %}
+
+{% endblock %}
